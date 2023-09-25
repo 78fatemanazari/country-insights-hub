@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from './Navbar';
 import Sliders from './Sliders';
 import Countries from './Countries';
+import Footer from './Footer';
 
 function Home() {
   return (
@@ -9,9 +10,7 @@ function Home() {
       <Navbar />
       <Sliders />
       <Countries />
-      <footer className="footer">
-        <p>This is footer part</p>
-      </footer>
+      <Footer />
     </div>
   );
 }

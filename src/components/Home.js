@@ -1,13 +1,12 @@
 import React from 'react';
 import Navbar from './Navbar';
+import Sliders from './Sliders';
 
 function Home() {
   return (
     <div className="home">
       <Navbar />
-      <div className="header">
-        <p>This is header part</p>
-      </div>
+      <Sliders />
       <div className="countries-container">
         <p>This is countries part</p>
       </div>

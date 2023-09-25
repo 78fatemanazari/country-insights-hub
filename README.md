@@ -24,17 +24,18 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [Space-Travelers-Hub] <a name="about-project"></a>
+# 📖 [Country-insights-Hub] <a name="about-project"></a>
 
-> **[Space Travelers' Hub]** In this Project, we worked with the real live data from the SpaceX API. Our task was to build a web application for a company that provides commercial and scientific space travel services. The application will allow users to book rockets and join selected space missions.
+> **[Country-insights-Hub]** is a project that shows by default 10 countries with Names, Flags and Populations in the home page. And when you click on each of this countries, you will see more details about that country. Also you can search any country bt it's name in the search bar. 
+This project fetched data from this https://restcountries.com API.
 
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
 - <summary>Client</summary>
     <ul>
-      <li><a href="https://reactjs.org/">JSX</a></li>
-      <li><a href="https://reactjs.org/">SCSS</a></li>
+      <li><a href="https://reactjs.org/">JS</a></li>
+      <li><a href="https://reactjs.org/">CSS</a></li>
       <li><a href="https://reactjs.org/">JavaScript</a></li>
       <li><a href="https://reactjs.org/">React-Redux</a></li>
       <li><a href="https://reactjs.org/">API</a></li>
@@ -73,14 +74,14 @@ Clone this repository to your desired folder:
 - Use the following Commands:
 
       cd your-desired-folder
-      git clone git@github.com:ab-noori/Space-Travelers-Hub.git
+      git clone https://github.com/78fatemanazari/country-insights-hub.git
 
 
 ### Install
 - Install this project with:
 
-       npx create-react-app my-app
-       cd my-app
+       npx create-react-app .
+       cd "your project folder name"
        npm start
 
 
@@ -104,16 +105,12 @@ Clone this repository to your desired folder:
 
       npm i -D gh-pages
 
-- 2- Add _homepage_ to project's jason file:
-
-      "homepage": "https://ab-noori.github.io/Space-Travelers-Hub",
-
-- 3- Add the following scripts to the _package.jason_ file:
+- 2- Add the following scripts to the _package.jason_ file:
 
       "predeploy": "npm run build",
       "deploy": "gh-pages -d build ",
 
-- 4- Finally run the following command:
+- 3- Run the following command:
 
       npm run deploy
 
@@ -121,12 +118,7 @@ Clone this repository to your desired folder:
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-## 👥 Authors <a name="authors"></a>
-
-👤 **Alexander Saavedra**
-
-- GitHub: [@alexansaa](https://github.com/alexansaa)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/alexander-saavedra-2803b1b6/)
+## 👥 Author <a name="authors"></a>
 
 👤 **Fatema Nazari**
 
@@ -136,17 +128,15 @@ Clone this repository to your desired folder:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **[fetched data from api into redux store]**
-- [ ] **[Used redux toolkit]**
-- [ ] **[Applied conditional rendering of component]**
+- [ ] **[Build desktop version]**
+- [ ] **[work on styles]**
+- [ ] **[Add animations and transitions]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🤝 Contributing <a name="contributing"></a>
 
 Contributions, issues, and feature requests are welcome!
-
-Feel free to check the [issues page](https://github.com/ab-noori/Space-Travelers-Hub/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

@@ -1,5 +1,5 @@
 .navbar {
-  background-color: blue;
+  background-color: rgb(14, 60, 130);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -9,4 +9,35 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-left: 10px;
+}
+
+.year-btn{
+  border: none;
+  background: none;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.title{
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.right{
+  margin-right: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mic{
+  cursor: pointer;
+}
+
+.setting{
+  margin-left: 10px;
+  cursor: pointer;
 }

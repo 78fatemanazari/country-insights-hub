@@ -3,9 +3,9 @@ import '../styles/Footer.css';
 
 function Footer() {
   return (
-    <footer>
+    <div className="footer">
       <p>© 2023 Country Insights Hub | Developed by Fatema Nazari</p>
-    </footer>
+    </div>
   );
 }
 

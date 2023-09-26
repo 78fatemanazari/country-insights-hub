@@ -1,3 +1,12 @@
-footer {
-  background-color: blue;
+.footer {
+  background-color: rgb(14, 60, 130);
+  height: 60px;
+}
+
+.footer p{
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  padding-top: 15px;
 }

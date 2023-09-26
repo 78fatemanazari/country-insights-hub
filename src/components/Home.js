@@ -1,7 +1,7 @@
 import React from 'react';
 import Navbar from './Navbar';
 import Sliders from './Sliders';
-import Countries from './Countries';
+import CountiresItem from './Countries';
 import Footer from './Footer';
 
 function Home() {
@@ -9,7 +9,7 @@ function Home() {
     <div className="home">
       <Navbar />
       <Sliders />
-      <Countries />
+      <CountiresItem />
       <Footer />
     </div>
   );

@@ -1,5 +1,4 @@
 import React from 'react';
-import '../styles/Navbar.css';
 import Mic from '../assets/mic.png';
 import Setting from '../assets/setting.png';
 

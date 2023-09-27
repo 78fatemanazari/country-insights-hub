@@ -11,10 +11,10 @@ function Countries() {
   }, [dispatch]);
 
   const filter = countries.filter(
-    (acountry) => acountry.name === 'United States'
-      || acountry.name === 'Norway'
-      || acountry.name === 'New Zealand'
-      || acountry.name === 'Italy'
+    (acountry) => acountry.name === 'Ireland'
+      || acountry.name === 'Austria'
+      || acountry.name === 'Portugal'
+      || acountry.name === 'Mexico'
       || acountry.name === 'Finland'
       || acountry.name === 'France'
       || acountry.name === 'Spain'
@@ -24,19 +24,21 @@ function Countries() {
   );
   console.log(filter);
   return (
-    <div>
+    <div className="data-container">
       {
         filter.map(
           (country) => (
-            <div key={nanoid()}>
+            <div key={nanoid()} className="countries-container">
               <div>
-                <img src={country.flags} alt={country.alt} />
+                <img src={country.flags} alt={country.alt} className="flags" />
               </div>
-              <h1>{country.name}</h1>
-              <h3>
-                continent:
-                {country.continent}
-              </h3>
+              <div>
+                <p className="countries-name">{country.name}</p>
+                <p className="continent">
+                  continent:
+                  {country.continent}
+                </p>
+              </div>
             </div>
           ),
         )

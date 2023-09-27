@@ -1,20 +1,14 @@
 import React from 'react';
-import Mic from '../assets/mic.png';
-import Setting from '../assets/setting.png';
+import Logo from '../assets/logo.png';
+import '../styles/Navbar.css';
 
 function Navbar() {
   return (
     <div className="navbar">
-      <div className="left">
-        <button className="year-btn" type="button">2015</button>
-      </div>
-      <div className="middle">
-        <p className="title">Most Views</p>
-      </div>
-      <div className="right">
-        <img className="mic" src={Mic} width="20" height="20" alt="mic" />
-        <img className="setting" src={Setting} width="30" height="30" alt="setting icon" />
-      </div>
+      <nav className="nav">
+        <h1>Country Insights Hub</h1>
+        <img src={Logo} width="200" height="150" alt="logo" />
+      </nav>
     </div>
   );
 }

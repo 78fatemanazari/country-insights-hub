@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { nanoid } from 'nanoid';
 import { fetchCountries } from '../redux/CountriesSlice';
+import '../styles/Countries.css';
 
 function Countries() {
   const dispatch = useDispatch();
@@ -30,7 +31,7 @@ function Countries() {
           (country) => (
             <div key={nanoid()} className="countries-container">
               <div>
-                <img src={country.flags} alt={country.alt} className="flags" />
+                <img src={country.flags} alt={country.alt} className="flags" width="300" height="200" />
               </div>
               <div>
                 <p className="countries-name">{country.name}</p>

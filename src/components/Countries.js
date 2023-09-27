@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { nanoid } from 'nanoid';
 import { fetchCountries } from '../redux/CountriesSlice';
+import goIcon from '../assets/images.png';
 import '../styles/Countries.css';
 
 function Countries() {
@@ -21,7 +22,9 @@ function Countries() {
       || acountry.name === 'Spain'
       || acountry.name === 'Belgium'
       || acountry.name === 'China'
-      || acountry.name === 'Japan',
+      || acountry.name === 'Japan'
+      || acountry.name === 'Iran'
+      || acountry.name === 'Colombia',
   );
   console.log(filter);
   return (
@@ -33,13 +36,20 @@ function Countries() {
               <div>
                 <img src={country.flags} alt={country.alt} className="flags" width="300" height="200" />
               </div>
-              <div>
+              <div className="texts">
                 <p className="countries-name">{country.name}</p>
-                <p className="continent">
-                  continent:
-                  {country.continent}
-                </p>
+                <div className="properties">
+                  <p className="f-title">continent:</p>
+                  <p className="continent">
+                    {country.continent}
+                  </p>
+                  <p className="f-title">Population:</p>
+                  <p className="continent">
+                    {country.population / 100000}
+                  </p>
+                </div>
               </div>
+              <img className="go-icon" src={goIcon} alt="go icon" width="50" height="50" />
             </div>
           ),
         )

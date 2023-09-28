@@ -14,6 +14,9 @@ export const fetchCountries = createAsyncThunk(
         const continent = country.continents ? country.continents[0] : country.continents;
         const { population } = country;
         const { area } = country;
+        const timezones = country.timezones ? country.timezones[0] : country.timezones;
+        const currencies = country.currencies ? Object.keys(country.currencies)[0] : null;
+        const languages = country.languages ? Object.keys(country.languages)[0] : null;
         const flags = country.flags.svg;
         const { alt } = country.flags;
         countriesFilter.push(
@@ -22,13 +25,15 @@ export const fetchCountries = createAsyncThunk(
             capital,
             continent,
             population,
+            timezones,
+            currencies,
+            languages,
             area,
             flags,
             alt,
           },
         );
       });
-      console.log(countriesFilter[0].flags.svg);
       return countriesFilter;
     } catch (error) {
       return rejectWithValue(error.response);
@@ -40,6 +45,18 @@ const CountriesSlice = createSlice({
   name: 'countries',
   initialState: {
     countries: [],
+    countriesfilter: [],
+  },
+  reducers: {
+    filtercountries: (state, action) => {
+      const countryname = action.payload;
+      const filteredcountry = state.countries.filter(
+        (acountry) => acountry.name.toLowerCase().includes(countryname.toLowerCase()),
+      );
+      return {
+        countryfilter: filteredcountry,
+      };
+    },
   },
   extraReducers: (builder) => {
     builder.addCase(fetchCountries.fulfilled, (state, action) => {
@@ -48,4 +65,5 @@ const CountriesSlice = createSlice({
   },
 });
 
+export const { filtercountries } = CountriesSlice.actions;
 export default CountriesSlice.reducer;

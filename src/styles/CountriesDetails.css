@@ -1,3 +1,31 @@
-.details-container {
-  background-color: yellow;
+.country-containerd {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  padding: 10px;
+}
+
+.country-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  padding: 10px;
+}
+
+.countries-container {
+  border: 1px solid #fff;
+  display: flex;
+  justify-content: space-between;
+  padding: 7px;
+  cursor: pointer;
+  gap: 20px;
+}
+
+.countries-container:hover {
+  border: 2px solid #fff;
 }

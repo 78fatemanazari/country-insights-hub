@@ -1,16 +1,22 @@
 import React, { useEffect } from 'react';
+import PropTypes from 'prop-types';
 import { useDispatch, useSelector } from 'react-redux';
+import { NavLink } from 'react-router-dom';
 import { nanoid } from 'nanoid';
-import { fetchCountries } from '../redux/CountriesSlice';
+import { filtercountries, fetchCountries } from '../redux/CountriesSlice';
 import goIcon from '../assets/images.png';
 import '../styles/Countries.css';
 
-function Countries() {
+function Countries({ CountryClass }) {
   const dispatch = useDispatch();
   const { countries } = useSelector((store) => store.countries);
   useEffect(() => {
     dispatch(fetchCountries());
   }, [dispatch]);
+
+  const filterCountry = (countryName) => {
+    dispatch(filtercountries(countryName));
+  };
 
   const filter = countries.filter(
     (acountry) => acountry.name === 'Ireland'
@@ -26,9 +32,8 @@ function Countries() {
       || acountry.name === 'Iran'
       || acountry.name === 'Colombia',
   );
-  console.log(filter);
   return (
-    <div className="data-container">
+    <div className={CountryClass} data-testid="countries-item">
       {
         filter.map(
           (country) => (
@@ -45,11 +50,23 @@ function Countries() {
                   </p>
                   <p className="f-title">Population:</p>
                   <p className="continent">
-                    {country.population / 100000}
+                    {country.population / 1000000}
                   </p>
                 </div>
               </div>
-              <img className="go-icon" src={goIcon} alt="go icon" width="50" height="50" />
+              <div>
+                <NavLink to="/Details">
+                  <button
+                    className="go-icon"
+                    type="button"
+                    onClick={() => {
+                      filterCountry(country.name);
+                    }}
+                  >
+                    <img src={goIcon} alt="go icon" width="50" height="50" />
+                  </button>
+                </NavLink>
+              </div>
             </div>
           ),
         )
@@ -57,5 +74,9 @@ function Countries() {
     </div>
   );
 }
+
+Countries.propTypes = {
+  CountryClass: PropTypes.string.isRequired,
+};
 
 export default Countries;

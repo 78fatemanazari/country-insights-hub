@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import { nanoid } from 'nanoid';
 import { fetchCountries } from '../redux/CountriesSlice';
-import Back from '../assets/back.jpg';
+import Back from '../assets/back.png';
 import '../styles/DetailsPage.css';
 
 function DetailsPage() {

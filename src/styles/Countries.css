@@ -8,7 +8,6 @@
 }
 
 .countries-container {
-  border: 1px solid #fff;
   display: flex;
   justify-content: space-between;
   padding: 7px;
@@ -21,7 +20,7 @@
 }
 
 .countries-container:hover {
-  border: 2px solid #fff;
+  border: 2px solid rgba(235, 90, 138, 0.801);
 }
 
 .flags {
@@ -56,11 +55,6 @@
   font-weight: 600;
 }
 
-.go-icon {
-  border: none;
-  background: #000;
-}
-
 .home {
   display: flex;
   flex-direction: column;
@@ -73,14 +67,17 @@
 }
 
 .search-container input {
-  border: 1px solid #fff;
-  background-color: #000;
+  border: 1px solid rgba(235, 90, 138, 0.801);
+  background-color: #fff;
   padding: 10px 30px 10px 30px;
-  color: #fff;
 }
 
 input::placeholder {
-  color: #fff;
+  color: rgba(235, 90, 138, 0.801);
+}
+
+.go-icon {
+  cursor: pointer;
 }
 
 @media only screen and (max-width: 768px) {
@@ -91,7 +88,6 @@ input::placeholder {
   }
 
   .countries-container {
-    border-bottom: 1px solid #fff;
     display: flex;
     flex-direction: column;
   }
@@ -130,6 +126,6 @@ input::placeholder {
   }
 
   .go-icon {
-    border-radius: 50%;
+    cursor: pointer;
   }
 }

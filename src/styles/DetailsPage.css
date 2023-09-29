@@ -1,4 +1,13 @@
+.details {
+  width: 100%;
+}
+
+.details-page {
+  background-color: rgb(252, 89, 143);
+}
+
 .flag-container {
+  width: 100%;
   display: flex;
   justify-content: space-between;
 }
@@ -20,8 +29,8 @@
   justify-content: space-between;
   gap: 250px;
   align-items: center;
-  border: 1px solid #fff;
-  padding: 7px;
+  border-bottom: 1px solid #fff;
+  padding: 5px;
 }
 
 h2 {
@@ -35,7 +44,6 @@ p {
 .back-icon {
   width: 50px;
   height: 50px;
-  border: 1px solid #fff;
   margin-left: 5px;
   margin-top: 10px;
 }
@@ -64,8 +72,8 @@ p {
     display: flex;
     gap: 100px;
     align-items: center;
-    border: 1px solid #fff;
     padding: 3px;
+    border-bottom: 1px solid #fff;
   }
 
   h2 {
@@ -79,7 +87,7 @@ p {
   }
 
   .back-icon {
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
   }
 }

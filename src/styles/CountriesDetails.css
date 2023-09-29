@@ -18,14 +18,14 @@
 }
 
 .countries-container {
-  border: 1px solid #fff;
   display: flex;
   justify-content: space-between;
   padding: 7px;
   cursor: pointer;
   gap: 20px;
+  background-color: rgba(235, 90, 138, 0.801);
 }
 
 .countries-container:hover {
-  border: 2px solid #fff;
+  border: 2px solid  rgba(235, 90, 138, 0.801);
 }

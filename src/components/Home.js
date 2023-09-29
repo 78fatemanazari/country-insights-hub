@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import Countries from './Countries';
-import Navbar from './Navbar';
 import CountriesDetails from './CountriesDetails';
 import '../styles/Countries.css';
 import '../styles/CountriesDetails.css';
@@ -13,7 +12,6 @@ function Home() {
   };
   return (
     <div className="home">
-      <Navbar />
       <div className="search-container">
         <input type="text" onChange={getName} value={nameValue} placeholder="Search country by name.." />
       </div>

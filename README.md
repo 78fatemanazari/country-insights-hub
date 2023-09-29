@@ -51,10 +51,10 @@ This project fetched data from this https://restcountries.com API.
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](https://carlosz96.github.io/countries-database/)
+- [Live Demo Link](https://country-insights-hub-rnzs.onrender.com)
 
 Watch the live demo at the following link: 
-https://www.loom.com/share/1d1cc371c6e3462b844c0595da2afda5?sid=6ac88cde-625d-4d7a-a419-3a7fdfba7739
+https://www.loom.com/share/99e0a9f2f2f3474cb37233c5173185dc?sid=ee4fcd33-6e69-45df-a2f5-b148091d1819
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

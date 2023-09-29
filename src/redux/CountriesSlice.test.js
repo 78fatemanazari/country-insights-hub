@@ -5,7 +5,6 @@ jest.mock('axios');
 
 describe('fetchCountries action', () => {
   it('should fetch countries successfully', async () => {
-    
     const initialState = {
       countries: [],
       countriesfilter: [],

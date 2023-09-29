@@ -1,20 +1,19 @@
 import axios from 'axios';
-import { fetchCountries } from './CountriesSlice';
-import countriesReducer, { filtercountries } from './CountriesSlice';
+import countriesReducer, { fetchCountries, filtercountries } from './CountriesSlice';
 
 jest.mock('axios');
 
 describe('fetchCountries action', () => {
   it('should fetch countries successfully', async () => {
     const responseData = [
-        {
-            name: 'Austria',
-            continent: 'Europe',
-          },
-          {
-            name: 'Ireland',
-            continent: 'Europe',
-          },
+      {
+        name: 'Austria',
+        continent: 'Europe',
+      },
+      {
+        name: 'Ireland',
+        continent: 'Europe',
+      },
     ]; // Define your mock response data here
 
     axios.get.mockResolvedValue({ data: responseData });
@@ -23,8 +22,7 @@ describe('fetchCountries action', () => {
     const getState = jest.fn();
 
     const result = await fetchCountries()(dispatch, getState, undefined);
-
-    expect(dispatch).toHaveBeenCalledWith(fetchCountries.fulfilled(result)); // Make sure it dispatches the correct action
+    expect(dispatch).toHaveBeenCalledWith(fetchCountries.fulfilled(result));
   });
 
   it('should handle fetch countries failure', async () => {
@@ -38,10 +36,9 @@ describe('fetchCountries action', () => {
     try {
       await fetchCountries()(dispatch, getState, undefined);
     } catch (error) {
-      expect(dispatch).toHaveBeenCalledWith(fetchCountries.rejected(error)); // Make sure it dispatches the correct action
+      expect(dispatch).toHaveBeenCalledWith(fetchCountries.rejected(error));
     }
   });
-
 });
 describe('countriesReducer', () => {
   it('should handle fetchCountries fulfilled', () => {
@@ -50,14 +47,14 @@ describe('countriesReducer', () => {
       countriesfilter: [],
     };
     const countriesData = [
-        {
-            name: 'Austria',
-            continent: 'Europe',
-          },
-          {
-            name: 'Ireland',
-            continent: 'Europe',
-          },
+      {
+        name: 'Austria',
+        continent: 'Europe',
+      },
+      {
+        name: 'Ireland',
+        continent: 'Europe',
+      },
     ]; // Define your mock countries data here
 
     const action = fetchCountries.fulfilled(countriesData);
@@ -71,13 +68,13 @@ describe('countriesReducer', () => {
     const initialState = {
       countries: [
         {
-            name: 'Austria',
-            continent: 'Europe',
-          },
-          {
-            name: 'Ireland',
-            continent: 'Europe',
-          },
+          name: 'Austria',
+          continent: 'Europe',
+        },
+        {
+          name: 'Ireland',
+          continent: 'Europe',
+        },
       ],
       countriesfilter: [],
     };
@@ -88,5 +85,3 @@ describe('countriesReducer', () => {
     expect(newState.countriesfilter).toEqual([{ name: 'Ireland' }]);
   });
 });
-
-

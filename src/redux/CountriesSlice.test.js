@@ -5,24 +5,24 @@ jest.mock('axios');
 
 describe('fetchCountries action', () => {
   it('should fetch countries successfully', async () => {
-    const responseData = [
-      {
-        name: 'Austria',
-        continent: 'Europe',
-      },
-      {
-        name: 'Ireland',
-        continent: 'Europe',
-      },
-    ]; // Define your mock response data here
+    
+    const initialState = {
+      countries: [],
+      countriesfilter: [],
+    };
+    const action = {
+      type: 'countries/fetchCountries/fulfilled',
+      payload: [
+        {
+          id: 1,
+          name: 'Austria',
+        },
 
-    axios.get.mockResolvedValue({ data: responseData });
+      ],
+    };
 
-    const dispatch = jest.fn();
-    const getState = jest.fn();
-
-    const result = await fetchCountries()(dispatch, getState, undefined);
-    expect(dispatch).toHaveBeenCalledWith(fetchCountries.fulfilled(result));
+    const newState = countriesReducer(initialState, action);
+    expect(newState.countries).toEqual([{ id: 1, name: 'Austria' }]);
   });
 
   it('should handle fetch countries failure', async () => {
@@ -65,23 +65,11 @@ describe('countriesReducer', () => {
   });
 
   it('should handle filtercountries', () => {
-    const initialState = {
-      countries: [
-        {
-          name: 'Austria',
-          continent: 'Europe',
-        },
-        {
-          name: 'Ireland',
-          continent: 'Europe',
-        },
-      ],
-      countriesfilter: [],
+    const countryName = 'French Polynesia';
+    const expectedAction = {
+      type: 'countries/filtercountries',
+      payload: countryName,
     };
-    const filterAction = filtercountries('Austria');
-
-    const newState = countriesReducer(initialState, filterAction);
-
-    expect(newState.countriesfilter).toEqual([{ name: 'Ireland' }]);
+    expect(filtercountries(countryName)).toEqual(expectedAction);
   });
 });

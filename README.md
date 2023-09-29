@@ -51,6 +51,11 @@ This project fetched data from this https://restcountries.com API.
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
+- [Live Demo Link](https://carlosz96.github.io/countries-database/)
+
+Watch the live demo at the following link: 
+https://www.loom.com/share/1d1cc371c6e3462b844c0595da2afda5?sid=6ac88cde-625d-4d7a-a419-3a7fdfba7739
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -150,6 +155,7 @@ Contributions, issues, and feature requests are welcome!
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
+  I would like to thank Nelson Sakwa for his beautifull and best design on Behance.
   I would like to thank Microverse and my coding partners.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

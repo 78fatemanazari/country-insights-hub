@@ -51,6 +51,11 @@ This project fetched data from this https://restcountries.com API.
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
+- [Live Demo Link](https://country-insights-hub-rnzs.onrender.com)
+
+Watch the live demo at the following link: 
+https://www.loom.com/share/99e0a9f2f2f3474cb37233c5173185dc?sid=ee4fcd33-6e69-45df-a2f5-b148091d1819
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -150,6 +155,7 @@ Contributions, issues, and feature requests are welcome!
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
+  I would like to thank Nelson Sakwa for his beautifull and best design on Behance.
   I would like to thank Microverse and my coding partners.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
